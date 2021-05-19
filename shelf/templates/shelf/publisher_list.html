@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+<ul>
+Lista Wydawcow:
+{% for publisher in object_list %}
+	 <li>{{publisher.name}}</li>
+{%endfor%}
+
+</ul>
+{%endblock%}

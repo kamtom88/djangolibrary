@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+<ul>
+Lista Autorow:
+{% for author in object_list %}
+	 <li><a href="{%url 'author-detail' author.id %}">{{author.last_name}} {{author.first_name}}</a></li>
+{%endfor%}
+
+</ul>
+{%endblock%}
