@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+<div><a href="{%url 'book-list'%}">Powrot do listy autorow</a></div><br>
+
+Detale Ksiazki: {{object.tittle}}<br>
+Nazwa : {{object.tittle}} <br>
+Autorzy: {%for author in object%} <br>
+Ilosc stron: {{object.sites}} <br>
+Kategoria: {{object.categories}} <br>
+
+
+
+
+
+{%endblock%}
