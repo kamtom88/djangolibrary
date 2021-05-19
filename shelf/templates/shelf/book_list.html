@@ -5,7 +5,11 @@
 <ul>
 Lista Ksiazek:
 {% for book in object_list %}
-	 <li>{{book.tittle}}</li>
+	 <li><a href="{%url 'book-detail' book.id %}">{{book.tittle}}</a>
+
+
+	 </li>
+
 {%endfor%}
 
 </ul>

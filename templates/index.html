@@ -2,8 +2,14 @@
 
 {% block 'content' %}
 
-<ul>
-    <li>Witaj na stronie biblioteki.</li>
-    <li>Aktualnie mamy: <strong>{{message}}</strong> ksiazki.</li>
-</ul>
+<style>
+    .a {
+    font-size:30px;
+}
+</style>
+Witaj na stronie biblioteki.
+
+<div class="a">
+    Aktualnie mamy: <strong>{{message}}</strong> ksiazki.
+</div>
 {%endblock%}

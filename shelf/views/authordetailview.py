@@ -5,4 +5,3 @@ from ..models import author
 
 class AuthorDetailView(DetailView):
     model = author.Author
-#

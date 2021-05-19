@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 
 {% block 'content' %}
+<style>
+    .a {
+    font-size:20px;
+}
+</style>
+
 <form method="post">
     {% csrf_token %}
-    <table>
-       {{form.as_table}}
-    </table>
+
+    <div class="a">
+        <table>
+           {{form.as_table}}
+        </table>
+    </div>
     <button type="submit">Wyślij</button>
 </form>
 
