@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import publisher, author, book, rent, book_item, book_edition, book_category
+from .models import publisher, author, book, rent, book_item, book_edition, book_category, message
 
 
 class BookItemAdmin(admin.ModelAdmin):
@@ -35,6 +35,11 @@ class BookCategoryAdmin(admin.ModelAdmin):
     list_display = ['name']
 
 
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ['name','email']
+
+
+admin.site.register(message.Message, MessageAdmin)
 admin.site.register(book_category.BookCategory, BookCategoryAdmin)
 admin.site.register(book_edition.BookEdition, BookEditionAdmin)
 admin.site.register(book_item.BookItem, BookItemAdmin)
