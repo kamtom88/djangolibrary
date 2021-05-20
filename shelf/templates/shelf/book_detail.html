@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block 'content' %}
+{% block content %}
 
 <div><a href="{%url 'book-list'%}">Powrot do listy ksiazek</a></div><br>
 
@@ -11,7 +11,9 @@ Kategoria: {%for category in book.categories.all%}
                 {{category.name}}
                     {%if not forloop.last%},{%endif%}
             {%endfor%}<br>
-Autorzy: {%for author in book.authors.all%} {{author.first_name}} {{author.last_name}}{%if not forloop.last%},{%endif%}{%endfor%}
+Autorzy: {%for author in book.authors.all%} {{author.first_name}} {{author.last_name}}{%if not forloop.last%},{%endif%}{%endfor%}<br>
+Rok wydania: {%for edition in book.bookedition_set.all %} {{edition.date|date:"Y"}} - {{edition.publisher}} {%endfor%}
+
 
 
 <!--{{object.authors.all}}-->

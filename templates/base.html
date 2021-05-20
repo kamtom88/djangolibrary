@@ -37,7 +37,7 @@
 
 /* Style page content */
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 180px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
 
@@ -46,6 +46,7 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.space { margin-top: 350px; }
 
     </style>
   <meta charset="utf-8">
@@ -65,14 +66,16 @@
   <a href="/books">Książki</a>
   <a href="/authors">Autorzy</a>
   <a href="/publishers">Wydawcy</a>
-  <a href="/contact">Kontakt</a>
+  <a href="/rental">Wypożycz książkę</a>
+  ><a class="space" href="/contact">Kontakt</a>
+
 </div>
 
 	<!----------Tresc Strony------------>
 <div  class = main>
-	{%block 'content' %}
+	{% block content %}
 
-	{%endblock%}
+	{% endblock %}
 </div>
 </body>
 </html>
